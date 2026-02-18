@@ -10,7 +10,7 @@ from taxi.models import Car, Driver
 def validate_license_number(license_number: Any) -> None:
     license_number_pattern = r"^[A-Z]{3}\d{5}$"
     if not re.match(license_number_pattern, license_number):
-        raise forms.ValidationError("Incorect license number")
+        raise forms.ValidationError("Incorrect license number")
     return license_number
 
 
