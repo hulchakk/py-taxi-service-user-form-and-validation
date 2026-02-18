@@ -53,22 +53,22 @@ urlpatterns = [
     ),
     path("drivers/create/", DriverCreateView.as_view(), name="driver-create"),
     path(
-        "drivers/<int:pk>/update",
+        "drivers/<int:pk>/update/",
         DriverLicenseUpdateView.as_view(),
         name="driver-update-license",
     ),
     path(
-        "cars/<int:pk>/delete-user",
+        "cars/<int:pk>/delete-user/",
         delete_user_from_car,
         name="car-delete-user",
     ),
     path(
-        "cars/<int:pk>/assign-user",
+        "cars/<int:pk>/assign-user/",
         assign_user_to_car,
         name="car-assign-user",
     ),
     path(
-        "drivers/<int:pk>/delete",
+        "drivers/<int:pk>/delete/",
         DriverDeleteView.as_view(),
         name="driver-delete"
     )
